@@ -11,10 +11,12 @@ namespace TheoFighter
     {
         int frameX;
         int frameY;
-
-        int frameCount;
         int width;
         int height;
+
+        int frameCount;
+        int speed;
+
 
         Rectangle rect;
         Texture2D sheet;

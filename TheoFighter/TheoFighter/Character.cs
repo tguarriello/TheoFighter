@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,14 +7,22 @@ using System.Text;
 
 namespace TheoFighter
 {
-    class Character
-    {
-        string name;
-        //Animation anims;
-        Vector2 Location;
-        Rectangle rect;
+    abstract class Character
+    {        
+        protected Vector2 Location;
+        protected Rectangle rect;
 
-        public Character()
+        protected Texture2D sheet;
+
+        protected List<Animation> animations;
+
+        protected const int IDLE = 0;
+        protected const int WALK = 1;
+        protected const int JUMP = 2;
+        protected const int PUNCH = 3;
+        protected const int KICK = 4;
+
+        protected Character()
         {
 
         }
