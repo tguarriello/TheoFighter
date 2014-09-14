@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Desktop
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheoFighter", "TheoFighter\TheoFighter\TheoFighter.csproj", "{24D75261-A4D9-46CC-B11F-6198F8446385}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "TheoFighterContent", "TheoFighter\TheoFighterContent\TheoFighterContent.contentproj", "{58B811D9-8C6D-4BC4-BCF3-2BB4937FF49A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24D75261-A4D9-46CC-B11F-6198F8446385}.Debug|x86.ActiveCfg = Debug|x86
+		{24D75261-A4D9-46CC-B11F-6198F8446385}.Debug|x86.Build.0 = Debug|x86
+		{24D75261-A4D9-46CC-B11F-6198F8446385}.Release|x86.ActiveCfg = Release|x86
+		{24D75261-A4D9-46CC-B11F-6198F8446385}.Release|x86.Build.0 = Release|x86
+		{58B811D9-8C6D-4BC4-BCF3-2BB4937FF49A}.Debug|x86.ActiveCfg = Debug|x86
+		{58B811D9-8C6D-4BC4-BCF3-2BB4937FF49A}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
