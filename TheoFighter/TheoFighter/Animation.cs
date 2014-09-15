@@ -14,6 +14,7 @@ namespace TheoFighter
         int width;
         int height;
 
+        GameTime elapsedTime = new GameTime();
         int frameCount;
         int speed;
 
@@ -31,6 +32,12 @@ namespace TheoFighter
             sheet = newSheet;
 
             rect = new Rectangle(x, y, width, height);
+        }
+
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            rect.X = ((int)elapsedTime.TotalGameTime.Seconds % frameCount) * frameX;
+            spriteBatch.Draw(sheet, rect, Color.White);
         }
 
 

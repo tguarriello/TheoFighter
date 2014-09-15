@@ -9,7 +9,9 @@ namespace TheoFighter
 {
     class Ryu : Character
     {
-        
+        Animation idle ;
+        Animation jump ;
+        Animation punch;
 
         public Ryu()
             : base()
@@ -21,9 +23,19 @@ namespace TheoFighter
         {
             sheet = Content.Load<Texture2D>("RyuSheet");
 
-            Animation idle = new Animation(0, 92, 48, 82, 5, sheet);
-            Animation jump = new Animation(0, 266,40, 90, 7, sheet);
-            Animation punch = new Animation(0, 456, 50, 80, 6, sheet);
+            if (sheet != null)
+            {
+                idle = new Animation(0, 92, 48, 82, 5, sheet);
+                jump = new Animation(0, 266, 40, 90, 7, sheet);
+                punch = new Animation(0, 456, 50, 80, 6, sheet);
+            }
+        }
+
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            Animation current = idle;
+
+            current.Draw(spriteBatch);
         }
 
 
