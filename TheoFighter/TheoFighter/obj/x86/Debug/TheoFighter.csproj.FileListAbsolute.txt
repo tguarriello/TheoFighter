@@ -1,0 +1,8 @@
+E:\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\bin\x86\Debug\Content\RyuSheet.xnb
+E:\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\bin\x86\Debug\TheoFighter.exe
+E:\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\bin\x86\Debug\TheoFighter.pdb
+E:\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\obj\x86\Debug\TheoFighter.csprojResolveAssemblyReference.cache
+E:\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\obj\x86\Debug\TheoFighter.exe
+E:\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\obj\x86\Debug\TheoFighter.pdb
+E:\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\bin\x86\Debug\Content\RyuSheet.PNG

@@ -9,8 +9,8 @@ namespace TheoFighter
 {
     abstract class Character
     {        
-        protected Vector2 Location;
-        protected Rectangle rect;
+        protected Vector2 position;
+        protected float speed;
 
         protected Texture2D sheet;
 

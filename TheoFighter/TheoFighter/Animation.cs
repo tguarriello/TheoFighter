@@ -15,11 +15,13 @@ namespace TheoFighter
         int height;
 
         GameTime elapsedTime = new GameTime();
+        
         int frameCount;
-        int speed;
+        int speed = 24;
 
 
-        Rectangle rect;
+        Rectangle sourceRect;
+        Rectangle destRect;
         Texture2D sheet;
 
         public Animation(int x, int y, int newWidth, int newHeight, int length, Texture2D newSheet)
@@ -30,14 +32,26 @@ namespace TheoFighter
             height = newHeight;
             frameCount = length;
             sheet = newSheet;
+            destRect.Width = width;
+            destRect.Height = height;
 
-            rect = new Rectangle(x, y, width, height);
+            sourceRect = new Rectangle(x, y, width, height);
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            rect.X = ((int)elapsedTime.TotalGameTime.Seconds % frameCount) * frameX;
-            spriteBatch.Draw(sheet, rect, Color.White);
+
+            if(sourceRect != null)
+                spriteBatch.Draw(sheet, destRect, sourceRect, Color.White);
+        }
+
+        public void Update(GameTime gameTime, int x, int y)
+        {
+            sourceRect.X = (int)((gameTime.TotalGameTime.Milliseconds * 0.005f) % frameCount) * width;
+
+            destRect.X = x;
+            destRect.Y = y;
+            
         }
 
 
