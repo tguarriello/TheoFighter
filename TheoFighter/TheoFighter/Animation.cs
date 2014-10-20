@@ -18,6 +18,7 @@ namespace TheoFighter
         
         int frameCount;
         int speed = 24;
+        bool stop;
 
 
         Rectangle sourceRect;
@@ -40,18 +41,32 @@ namespace TheoFighter
 
         public void Draw(SpriteBatch spriteBatch)
         {
-
             if(sourceRect != null)
                 spriteBatch.Draw(sheet, destRect, sourceRect, Color.White);
         }
 
         public void Update(GameTime gameTime, int x, int y)
         {
-            sourceRect.X = (int)((gameTime.TotalGameTime.Milliseconds * 0.005f) % frameCount) * width;
+            if(!stop)
+                sourceRect.X = (int)((gameTime.TotalGameTime.Milliseconds / 200)  % frameCount) * width;
 
             destRect.X = x;
             destRect.Y = y;
+       
+        }
+
+        public void Stop()
+        {
+            stop = true;
             
+            
+        }
+
+        public void Start()
+        {
+            stop = false;
+            sourceRect.X = frameX;
+            sourceRect.Y = frameY;
         }
 
 

@@ -8,7 +8,6 @@ namespace TheoFighter
     {
         //Keys[] pressedkeys;
         public KeyboardState keyState = new KeyboardState();
-        Keys[] keys = new Keys[5];
         Keys up;
         Keys down;
         Keys left;
@@ -29,12 +28,6 @@ namespace TheoFighter
             left = newLeft;
             right = newRight;
             punch = newPunch;
-
-            keys[0] = up;
-            keys[1] = down;
-            keys[2] = left;
-            keys[3] = right;
-            keys[4] = punch;
         }
 
         public void Update()

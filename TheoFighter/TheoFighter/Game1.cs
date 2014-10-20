@@ -29,19 +29,13 @@ namespace TheoFighter
 
         protected override void LoadContent()
         {
-
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            
 
-            player.Load(Content);
-            
+            player.Load(Content);   
         }
 
 
-        protected override void UnloadContent()
-        {
-
-        }
+        protected override void UnloadContent(){}
 
 
         protected override void Update(GameTime gameTime)

@@ -12,6 +12,7 @@ namespace TheoFighter
     class Ryu : Character
     {
         PlayerInput input;
+        bool jumping = false;
         bool landed = true;
         Animation current = null;
         Animation idle ;
@@ -27,7 +28,7 @@ namespace TheoFighter
             : base()
         {
             velocity = new Vector2(0, 0);
-            position = new Vector2(100, 200);
+            position = new Vector2(100, 380);
             speed = 10;
         }
 
@@ -48,67 +49,85 @@ namespace TheoFighter
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            
             if(current != null)
                 current.Draw(spriteBatch);
         }
 
         public void Update(GameTime gameTime)
         {
-            deltaTime += gameTime.ElapsedGameTime.Milliseconds;
-
             if (current == null)
                 return;
-            current.Update(gameTime, (int)position.X, (int)position.Y);
+            deltaTime = gameTime.ElapsedGameTime.Milliseconds;
+
+            velocity.Y += (deltaTime / 100) * 2;
 
             HandleInput();
 
-            if (position.Y > 200)
-            {
-                position.Y = 200;
-                landed = true;
-                current = idle;
-            }
+
+            position += velocity;
+            Landed();
+
+            current.Update(gameTime, (int)position.X, (int)position.Y);
+
             deltaTime = 0;
-        }
-
-        private void Jump()
-        {
-            landed = false;
-            velocity.Y  = (deltaTime / 100) * -200;
-            current = jump;
-
         }
 
         private void HandleInput()
         {
             input.Update();
 
-
             if (input.isDownLeft)
             {
-                velocity.X = (-deltaTime/100) * speed;
+                velocity.X = (-deltaTime / 100) * speed;
                 //TODO: animation face left
             }
 
             else if (input.isDownRight)
             {
-                velocity.X = (deltaTime/100) * speed;
+                velocity.X = (deltaTime / 100) * speed;
                 //TODO: animation face right
             }
             else { velocity.X = 0; }
 
-
+            //handle jump button
             if (input.isDownUp)
             {
                 if (landed)
                     Jump();
-            }
-
-            position += velocity;
- 
-            velocity.Y += 2;
+            }  
         }
+        //velocity.Y += (deltaTime / 100) * 2;
+        private void Jump()
+        {
+            jumping = true;
+            landed = false;
+            velocity.Y  = (deltaTime / 100) * -50;
+            if(current != jump)
+            {
+                //current.Stop();
+                current = jump;
+                current.Start();
+            }
+        }
+
+        private void Landed()
+        {
+            if (position.Y > 400)
+            {
+                if (landed == false)
+                {
+                    landed = true;
+                    //current.Stop();
+                    current = idle;
+                    current.Start();
+                }
+                position.Y = 400;
+                
+                jumping = false;
+            }
+        }
+
+
 
     }
 }
