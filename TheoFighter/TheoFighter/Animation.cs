@@ -19,6 +19,7 @@ namespace TheoFighter
         int frameCount;
         int speed = 24;
         bool stop;
+        float deltaTime;
 
 
         Rectangle sourceRect;
@@ -47,8 +48,9 @@ namespace TheoFighter
 
         public void Update(GameTime gameTime, int x, int y)
         {
+            deltaTime += gameTime.ElapsedGameTime.Milliseconds;
             if(!stop)
-                sourceRect.X = (int)((gameTime.TotalGameTime.Milliseconds / 200)  % frameCount) * width;
+                sourceRect.X = (int)((deltaTime / 200)  % frameCount) * width;
 
             destRect.X = x;
             destRect.Y = y;
@@ -64,6 +66,7 @@ namespace TheoFighter
 
         public void Start()
         {
+            deltaTime = 0;
             stop = false;
             sourceRect.X = frameX;
             sourceRect.Y = frameY;

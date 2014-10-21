@@ -1,1 +1,2 @@
 E:\Documents\GitHub\TheoFighter\TheoFighter\TheoFighterContent\obj\x86\Debug\TheoFighterContent.contentprojResolveAssemblyReference.cache
+C:\Users\Theo\Documents\GitHub\TheoFighter\TheoFighter\TheoFighterContent\obj\x86\Debug\TheoFighterContent.contentprojResolveAssemblyReference.cache

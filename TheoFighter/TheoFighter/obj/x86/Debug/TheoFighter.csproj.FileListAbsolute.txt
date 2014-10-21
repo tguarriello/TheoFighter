@@ -6,3 +6,11 @@ E:\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\obj\x86\Debug\Microsoft.
 E:\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\obj\x86\Debug\TheoFighter.exe
 E:\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\obj\x86\Debug\TheoFighter.pdb
 E:\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\bin\x86\Debug\Content\RyuSheet.PNG
+C:\Users\Theo\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\bin\x86\Debug\Content\RyuSheet.xnb
+C:\Users\Theo\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\bin\x86\Debug\Content\RyuSheet.PNG
+C:\Users\Theo\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\bin\x86\Debug\TheoFighter.exe
+C:\Users\Theo\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\bin\x86\Debug\TheoFighter.pdb
+C:\Users\Theo\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\obj\x86\Debug\TheoFighter.csprojResolveAssemblyReference.cache
+C:\Users\Theo\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Theo\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\obj\x86\Debug\TheoFighter.exe
+C:\Users\Theo\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\obj\x86\Debug\TheoFighter.pdb
