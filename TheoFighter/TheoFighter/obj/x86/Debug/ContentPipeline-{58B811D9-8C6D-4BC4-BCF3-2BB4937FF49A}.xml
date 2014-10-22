@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Theo\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\bin\x86\Debug\Content\RyuSheet.xnb</Output>
-      <Time>2014-10-20T15:56:32.8361694-07:00</Time>
+      <Output>E:\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\bin\x86\Debug\Content\RyuSheet.xnb</Output>
+      <Time>2014-10-22T01:11:17.1999661-07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -17,10 +17,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Theo\Documents\GitHub\TheoFighter\TheoFighter\TheoFighterContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Theo\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Theo\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Theo\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>E:\Documents\GitHub\TheoFighter\TheoFighter\TheoFighterContent\</RootDirectory>
+      <LoggerRootDirectory>E:\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\</LoggerRootDirectory>
+      <IntermediateDirectory>E:\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>E:\Documents\GitHub\TheoFighter\TheoFighter\TheoFighter\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -49,7 +49,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2014-10-21T08:50:35.0329976-07:00</Value>
+        <Value>2014-10-19T16:19:06.7255239-07:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

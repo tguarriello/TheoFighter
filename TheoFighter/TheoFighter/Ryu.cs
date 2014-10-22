@@ -14,6 +14,7 @@ namespace TheoFighter
         PlayerInput input;
         bool jumping = false;
         bool landed = true;
+        bool punching = false;
         Animation current = null;
         Animation idle ;
         Animation jump ;
@@ -23,6 +24,7 @@ namespace TheoFighter
 
          
         float deltaTime = 0.0f;
+        float animationPlayTime = 0.0f;
 
         public Ryu()
             : base()
@@ -39,8 +41,8 @@ namespace TheoFighter
             if (sheet != null)
             {
                 idle = new Animation(0, 5, 48, 82, 9, sheet);
-                jump = new Animation(0, 266, 40, 90, 7, sheet);
-                punch = new Animation(0, 456, 50, 80, 6, sheet);
+                jump = new Animation(0, 267, 40, 90, 6, sheet);
+                punch = new Animation(0, 89, 50, 80, 6, sheet);
             }
 
             input = new PlayerInput(Keys.Up, Keys.Down, Keys.Left, Keys.Right, Keys.Space);
@@ -58,6 +60,14 @@ namespace TheoFighter
             if (current == null)
                 return;
             deltaTime = gameTime.ElapsedGameTime.Milliseconds;
+
+            if(punching)
+            {
+                animationPlayTime += deltaTime;
+                if (animationPlayTime > 0.46f)
+                    current = idle;
+            }
+
 
             velocity.Y += (deltaTime / 100) * 2;
 
@@ -94,7 +104,12 @@ namespace TheoFighter
             {
                 if (landed)
                     Jump();
-            }  
+            } 
+            //handle punch button
+           if(input.isDownPunch)
+           {
+               Punch();
+           }
         }
         //velocity.Y += (deltaTime / 100) * 2;
         private void Jump()
@@ -125,6 +140,12 @@ namespace TheoFighter
                 
                 jumping = false;
             }
+        }
+
+        public void Punch()
+        {
+            punching = true;
+            current = punch;
         }
 
 
